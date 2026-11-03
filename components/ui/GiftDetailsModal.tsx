@@ -256,15 +256,15 @@ export default function GiftCardModal({ isOpen, onClose }: GiftCardModalProps) {
                 >
                   {customImage ? (
                     <>
-                     <Image
-  src={customImage}
-  alt="Custom"
-  width={0}
-  height={0}
-  sizes="100vw"
-  priority
-  className="w-full h-full object-cover"
-/>
+                      <Image
+                        src={customImage}
+                        alt="Custom"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        priority
+                        className="w-full h-full object-cover"
+                      />
                       <div
                         onClick={handleRemoveCustomImage}
                         className="absolute top-1 left-1 bg-red-500 text-white rounded-full p-0.5 hover:bg-red-600 transition-colors z-10 shadow-sm"
