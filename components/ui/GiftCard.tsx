@@ -48,7 +48,7 @@ export default function GiftCard({
             {index === 1 || index === 4 ? (
               <ArcticonsThaiSupermodels className="w-5 h-5 sm:w-6 sm:h-6 object-contain shrink-0" />
             ) : icon === "massage" ? (
-              <EmojioneV1PersonGettingMassage  />
+              <EmojioneV1PersonGettingMassage width={35} height={35} />
             ) : (
               <NotoV1Lipstick  />
             )}
