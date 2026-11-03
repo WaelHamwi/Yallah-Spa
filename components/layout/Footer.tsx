@@ -12,7 +12,7 @@
   GlyphsPolyMicrophone,
   WithiconsPastelRoseBouquet,
 } from "@/components/icons";
-
+import Image from "next/image";
 export default function Footer() {
   return (
     // Added [font-family:'Cairo',Helvetica,sans-serif] to the root to force Cairo globally
@@ -24,17 +24,25 @@ export default function Footer() {
       <div className="w-full bg-white relative ">
         <div className="relative w-full">
           {/* Desktop Wave Image */}
-          <img
+          <Image
             src="/wave.png"
             alt="Wave Shape"
+            width={0}
+            height={0}
+            sizes="100vw"
             className="hidden md:block w-full h-auto object-bottom"
+            priority
           />
 
           {/* Mobile Wave Image */}
-          <img
+          <Image
             src="/wave mob.png"
             alt="Wave Shape Mobile"
+            width={0}
+            height={0}
+            sizes="100vw"
             className="block md:hidden w-full h-auto object-bottom mt-0"
+            priority
           />
 
           {/* Flowers anchored to the extreme bottom corners */}
@@ -50,12 +58,15 @@ export default function Footer() {
         <div className="max-w-[1440px] mx-auto px-4 lg:px-4 xl:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_0.8fr_1.2fr_1fr] xl:grid-cols-[1fr_1fr_0.7fr_1.3fr_1fr] 3xl:grid-cols-[1fr_1fr_0.6fr_1.4fr_1fr] gap-8 lg:gap-2 xl:gap-6">
           {/* Column 1: Logo & Description */}
           <div className="flex flex-col items-center md:items-start text-center md:text-right md:mt-[-30px]">
-            <img
+            <Image
               src="/Yallah Spa Pink Wellness Logo 1.png"
               alt="Yallah Spa"
+              width={0}
+              height={0}
+              sizes="100vw"
               className="h-16 md:h-20 w-auto object-contain mb-4"
+              priority
             />
-
             {/* Mobile Tagline */}
             <p className="block md:hidden text-[#59364c] text-sm font-bold mb-6">
               لأن راحتك .. تستحق أفضل
@@ -266,7 +277,7 @@ export default function Footer() {
             {/* App Stores - Visible on mobile, border removed on mobile */}
             <div className="w-full md:border-t md:border-gray-100 pt-0 md:pt-4 xl:pt-6 flex flex-col items-center md:items-start">
               {/* HIDDEN ON MOBILE */}
-              <h4 className="hidden md:block text-[#59364c] font-bold text-sm xl:text-lg mb-3 xl:mb-3 self-center md:self-ؤثىفثق">
+              <h4 className="hidden md:block text-[#59364c] font-bold text-sm xl:text-lg mb-3 xl:mb-3 self-center md:self-center">
                 تطبيقاتنا
               </h4>
 

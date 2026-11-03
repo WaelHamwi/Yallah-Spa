@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { Cart, StashBurgerClassic } from "@/components/icons";
+import Image from "next/image";
 
 const navLinks = [
   { label: "الرئيسية", active: false },
@@ -20,10 +21,14 @@ export default function Navbar() {
         </button>
 
         <a href="/" aria-label="Yallah Spa Home">
-          <img
+          <Image
             src="/Yallah spa.png"
             alt="Yallah Spa"
-            className=" w-auto object-contain"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-auto h-10 object-contain"
+            priority
           />
         </a>
 
@@ -35,10 +40,14 @@ export default function Navbar() {
       {/* Desktop View*/}
       <div className="hidden md:flex items-center justify-between px-8 py-4 max-w-[1440px] mx-auto">
         <a href="/" aria-label="Yallah Spa Home" className="shrink-0">
-          <img
+          <Image
             src="/Yallah spa.png"
             alt="Yallah Spa"
-            className=" w-auto object-contain"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-auto h-12 object-contain"
+            priority
           />
         </a>
 

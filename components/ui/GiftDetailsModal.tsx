@@ -1,10 +1,11 @@
 ﻿"use client";
 import React, { useState, useRef } from "react";
-import { createPortal } from "react-dom"; 
+import { createPortal } from "react-dom";
 import { X, Check, Plus, Minus } from "lucide-react";
 import { AkarIconsCalendar } from "@/components/icons";
 import { useModalAnimation } from "@/hooks/useModalAnimation";
 import { GiftCardModalProps } from "@/types";
+import Image from "next/image";
 export default function GiftCardModal({ isOpen, onClose }: GiftCardModalProps) {
   // Visual States
   const [selectedStyle, setSelectedStyle] = useState("gift-card");
@@ -124,10 +125,14 @@ export default function GiftCardModal({ isOpen, onClose }: GiftCardModalProps) {
           <div className="flex flex-col flex-1 rounded-xl border border-gray-200 overflow-hidden bg-white shadow-sm">
             {/* Image Area */}
             <div className="w-full bg-[#D4D4D4] flex justify-center items-center py-10 md:py-24 relative">
-              <img
+              <Image
                 src={getPreviewImage()}
                 alt="Gift Card Preview"
-                className="w-[150px] md:w-[240px] object-contain drop-shadow-md transition-all duration-300"
+                width={0}
+                height={0}
+                sizes="100vw"
+                priority
+                className="w-[150px] md:w-[240px] h-auto object-contain drop-shadow-md transition-all duration-300"
               />
             </div>
 
@@ -223,9 +228,13 @@ export default function GiftCardModal({ isOpen, onClose }: GiftCardModalProps) {
                         : "border border-gray-200 hover:border-gray-300"
                     }`}
                   >
-                    <img
+                    <Image
                       src={style.img!}
                       alt={style.label}
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      priority
                       className="w-full h-full object-cover"
                     />
                     {selectedStyle === style.id && (
@@ -247,11 +256,15 @@ export default function GiftCardModal({ isOpen, onClose }: GiftCardModalProps) {
                 >
                   {customImage ? (
                     <>
-                      <img
-                        src={customImage}
-                        alt="Custom"
-                        className="w-full h-full object-cover"
-                      />
+                     <Image
+  src={customImage}
+  alt="Custom"
+  width={0}
+  height={0}
+  sizes="100vw"
+  priority
+  className="w-full h-full object-cover"
+/>
                       <div
                         onClick={handleRemoveCustomImage}
                         className="absolute top-1 left-1 bg-red-500 text-white rounded-full p-0.5 hover:bg-red-600 transition-colors z-10 shadow-sm"
