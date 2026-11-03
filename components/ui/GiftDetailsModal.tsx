@@ -1,17 +1,11 @@
 ﻿"use client";
 import React, { useState, useRef } from "react";
-import { createPortal } from "react-dom"; // ADDED THIS
+import { createPortal } from "react-dom"; 
 import { X, Check, Plus, Minus } from "lucide-react";
 import { AkarIconsCalendar } from "@/components/icons";
 import { useModalAnimation } from "@/hooks/useModalAnimation";
-
-export default function GiftCardModal({
-  isOpen,
-  onClose,
-}: {
-  isOpen: boolean;
-  onClose: () => void;
-}) {
+import { GiftCardModalProps } from "@/types";
+export default function GiftCardModal({ isOpen, onClose }: GiftCardModalProps) {
   // Visual States
   const [selectedStyle, setSelectedStyle] = useState("gift-card");
   const [selectedAmount, setSelectedAmount] = useState(1000);
@@ -151,9 +145,7 @@ export default function GiftCardModal({
               <div className="space-y-3 md:space-y-4 text-xs md:text-sm text-gray-600">
                 <div className="flex justify-between gap-4">
                   <span className="font-bold text-gray-800 shrink-0">من</span>
-                  <span className="text-left truncate">
-                    {address || "..."}
-                  </span>
+                  <span className="text-left truncate">{address || "..."}</span>
                 </div>
 
                 <div className="flex justify-between gap-4">

@@ -1,6 +1,5 @@
-﻿import React, { useState } from "react";
+﻿import { useState } from "react";
 import {
-  CodexMoney,
   EmojioneV1PersonGettingMassage,
   NotoV1Lipstick,
   Vector,
@@ -8,14 +7,7 @@ import {
 } from "@/components/icons";
 import GiftCardModal from "./GiftDetailsModal"; 
 
-interface GiftCardProps {
-  title: string;
-  description: string;
-  price: string;
-  image: string;
-  icon: string;
-  index?: number;
-}
+import { GiftCardProps } from "@/types"
 
 export default function GiftCard({
   title,

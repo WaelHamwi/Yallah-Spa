@@ -1,6 +1,6 @@
 "use client";
-import { AkarIconsArrowUpRight, WrappedGift } from "@/components/icons";
-
+import { ArrowUpRight } from "lucide-react";
+import { WrappedGift } from "@/components/icons"
 const ratingIcons = ["/vector-4.svg", "/vector-3.svg", "/vector-2.svg", "/image.svg", "/vector.svg"];
 
 export const GiftPromotion = () => {
@@ -13,7 +13,7 @@ export const GiftPromotion = () => {
         </button>
         <button type="button" aria-label="اكتشف فروعنا" className="absolute w-[32.66%] h-[9.55%] top-[75.68%] left-[37.34%] flex items-center justify-center bg-[url('/rectangle-5.svg')] bg-[100%_100%] cursor-pointer">
           <span className="inline-flex -mt-0.5 h-6 w-[135px] relative items-center gap-[7px]">
-            <AkarIconsArrowUpRight aria-hidden="true" className="!relative !w-6 !h-6 !aspect-[1]" />
+            <ArrowUpRight aria-hidden="true" className="!relative !w-6 !h-6 !aspect-[1]" />
             <span className="relative w-fit text-[#c4c4c4] [font-family:'Cairo-Bold',Helvetica] font-bold text-base text-center tracking-[0] leading-[19.2px] whitespace-nowrap [direction:rtl]">اكتشف فروعنا</span>
           </span>
         </button>

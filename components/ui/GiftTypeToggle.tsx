@@ -1,10 +1,6 @@
 ﻿"use client";
 import { EmojioneV1PersonGettingMassage, FluentColorGiftCard16 } from "@/components/icons";
-
-interface GiftTypeToggleProps {
-  selectedType: "individual" | "package";
-  onSelectType: (type: "individual" | "package") => void;
-}
+import { GiftTypeToggleProps } from "@/types";
 
 export default function GiftTypeToggle({ selectedType, onSelectType }: GiftTypeToggleProps) {
   return (

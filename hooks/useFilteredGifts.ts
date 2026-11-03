@@ -1,6 +1,7 @@
 "use client";
 import { useMemo } from "react";
 import { mockGifts } from "@/data/mockData";
+import { UseFilteredGiftsParams } from "@/types";
 
 export type SortOption = "default" | "price-asc" | "price-desc";
 
@@ -16,15 +17,6 @@ const getPrice = (gift: { price: number | string }) => {
   const n = parseFloat(cleaned);
   return isNaN(n) ? 0 : n;
 };
-
-interface UseFilteredGiftsParams {
-  searchTerm: string;
-  selectedCategory: string;
-  selectedLocation: string;
-  giftType: "individual" | "package";
-  priceRange: { min: string; max: string };
-  sortBy: SortOption;
-}
 
 export function useFilteredGifts({
   searchTerm,

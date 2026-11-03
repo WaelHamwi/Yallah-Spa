@@ -2,10 +2,7 @@
 import React, { useRef } from "react";
 import { categories } from "@/data/mockData";
 
-interface CategoryFilterProps {
-  selectedCategory: string;
-  onSelectCategory: (id: string) => void;
-}
+import { CategoryFilterProps } from "@/types"; 
 
 export default function CategoryFilter({ selectedCategory, onSelectCategory }: CategoryFilterProps) {
   const scrollRef = useRef<HTMLDivElement>(null);

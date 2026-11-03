@@ -15,20 +15,20 @@ import {
   sortOptions,
   type SortOption,
 } from "@/hooks/useFilteredGifts";
-
+import { GiftType, PriceRange } from "@/types";
 export default function Catalog() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedLocation, setSelectedLocation] = useState("all");
-  const [giftType, setGiftType] = useState<"individual" | "package">(
-    "individual",
-  );
+  const [giftType, setGiftType] = useState<GiftType>("individual");
   const [isLocationOpen, setIsLocationOpen] = useState(false);
   const locationRef = useRef<HTMLDivElement>(null);
 
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [sortBy, setSortBy] = useState<SortOption>("default");
-  const [priceRange, setPriceRange] = useState<{ min: string; max: string }>({
+  
+
+  const [priceRange, setPriceRange] = useState<PriceRange>({
     min: "",
     max: "",
   });
