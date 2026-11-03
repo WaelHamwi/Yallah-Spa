@@ -15,7 +15,7 @@ export interface Gift {
 }
 
 export interface Category {
-  id: string;
+  id?: string;
   label: string;
   width?: string;
   textClass?: string;
