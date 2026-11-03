@@ -18,6 +18,7 @@ export interface Category {
   id: string;
   label: string;
   width?: string;
+  textClass?: string;
 }
 
 export interface LocationOption {
@@ -54,7 +55,7 @@ export interface PriceRange {
 }
 export interface GiftCard {
   title: string;
-  kind: string; 
+  kind: string;
   position: string;
   vector: string;
   price: string;
